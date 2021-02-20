@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import './app1.css'
 
 const $button1 = $('#button1')
 const $button2 = $('#button2')

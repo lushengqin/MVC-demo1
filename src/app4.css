@@ -1,0 +1,24 @@
+#hovers{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    border: 1px solid red;
+    margin: 30px;
+    border-radius: 50%;
+
+}
+@keyframes change{
+    0%{
+        background-color: pink;
+        color: #fff;
+    }
+    100%{
+        background-color: green;
+        color: #fff;
+    }
+}
+#hovers.active{
+    animation: change 3s infinite alternate linear;
+    
+}
