@@ -11349,6 +11349,7 @@ $titleLi.on('click', 'li', function (e) {
   $contentLi.children().eq(index).addClass('active').siblings().removeClass('active');
   $titleLi.children().eq(index).addClass('active').siblings().removeClass('active');
 });
+$titleLi.children().eq(0).trigger('click');
 },{"jquery":"../node_modules/jquery/dist/jquery.js","./app2.css":"app2.css"}],"app3.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -11427,7 +11428,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7584" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -10,5 +10,6 @@ $titleLi.on('click', 'li', (e) => {
     const index = $li.index()
     $contentLi.children().eq(index).addClass('active').siblings().removeClass('active')
     $titleLi.children().eq(index).addClass('active').siblings().removeClass('active')
-    
 })
+
+$titleLi.children().eq(0).trigger('click')
