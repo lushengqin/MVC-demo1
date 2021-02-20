@@ -11341,15 +11341,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var $titleLi = (0, _jquery.default)('#title');
 var $contentLi = (0, _jquery.default)('#content');
+var index = localStorage.getItem('app2-index') || 0;
 $titleLi.on('click', 'li', function (e) {
   var $li = (0, _jquery.default)(e.currentTarget); //获取到用户点击的元素
   // console.log($li.index()) //得到用户点击的元素的下标
 
   var index = $li.index();
+  localStorage.setItem('app2-index', index); //app2-index随便取
+
   $contentLi.children().eq(index).addClass('active').siblings().removeClass('active');
   $titleLi.children().eq(index).addClass('active').siblings().removeClass('active');
 });
-$titleLi.children().eq(0).trigger('click');
+$titleLi.children().eq(index).trigger('click');
 },{"jquery":"../node_modules/jquery/dist/jquery.js","./app2.css":"app2.css"}],"app3.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -11365,8 +11368,23 @@ var _jquery = _interopRequireDefault(require("jquery"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $move = (0, _jquery.default)('#move');
+var active = localStorage.getItem('app3-index') === 'yes';
+
+if (active) {
+  $move.addClass('active');
+} else {
+  $move.removeClass('active');
+}
+
 $move.on('click', function () {
-  $move.toggleClass('active');
+  // $move.toggleClass('active')
+  if ($move.hasClass('active')) {
+    $move.removeClass('active');
+    localStorage.setItem('app3-index', 'no');
+  } else {
+    $move.addClass('active');
+    localStorage.setItem('app3-index', 'yes');
+  }
 });
 },{"./app3.css":"app3.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"app4.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -11428,7 +11446,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7584" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6885" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

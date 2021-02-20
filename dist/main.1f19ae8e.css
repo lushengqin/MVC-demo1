@@ -60,11 +60,11 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    transition: all 0.5s linear;
     line-height: 150px;
     text-align: center;
     background-color: red;
     color: #fff;
+    transition: transform 1s;
     
 }
 
@@ -72,6 +72,7 @@ body{
     transform: translateX(100px);
     
 }
+
 #hovers{
     width: 200px;
     height: 200px;
