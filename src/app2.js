@@ -1,6 +1,22 @@
 import $ from 'jquery'
 import './app2.css'
 
+const htmlApp2 = `
+        <section id="app2">
+            <ul id="title">
+                <li>我是标题1</li>
+                <li>我是标题2</li>
+            </ul>
+            <ol id="content">
+                <li>我是标题1对应的内容1</li>
+                <li>我是标题2对应的内容2</li>
+            </ol>
+        </section>
+`
+const $element = $(htmlApp2).appendTo($('body>#page'))
+
+
+
 const $titleLi = $('#title')
 const $contentLi = $('#content')
 const index = localStorage.getItem('app2-index') || 0

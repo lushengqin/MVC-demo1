@@ -11289,6 +11289,8 @@ require("./app1.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var htmlApp1 = "\n        <section id=\"app1\">\n            <h1 id=\"number\">100</h1>\n            <div class=\"btn\">\n                <button id=\"button1\">+1</button>\n                <button id=\"button2\">-1</button>\n                <button id=\"button3\">*2</button>\n                <button id=\"button4\">\xF72</button>\n            </div>\n        </section>\n";
+var $element = (0, _jquery.default)(htmlApp1).prependTo((0, _jquery.default)('body>#page'));
 var $button1 = (0, _jquery.default)('#button1');
 var $button2 = (0, _jquery.default)('#button2');
 var $button3 = (0, _jquery.default)('#button3');
@@ -11339,6 +11341,8 @@ require("./app2.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var htmlApp2 = "\n        <section id=\"app2\">\n            <ul id=\"title\">\n                <li>\u6211\u662F\u6807\u98981</li>\n                <li>\u6211\u662F\u6807\u98982</li>\n            </ul>\n            <ol id=\"content\">\n                <li>\u6211\u662F\u6807\u98981\u5BF9\u5E94\u7684\u5185\u5BB91</li>\n                <li>\u6211\u662F\u6807\u98982\u5BF9\u5E94\u7684\u5185\u5BB92</li>\n            </ol>\n        </section>\n";
+var $element = (0, _jquery.default)(htmlApp2).appendTo((0, _jquery.default)('body>#page'));
 var $titleLi = (0, _jquery.default)('#title');
 var $contentLi = (0, _jquery.default)('#content');
 var index = localStorage.getItem('app2-index') || 0;
@@ -11367,6 +11371,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var htmlApp3 = "\n        <section id=\"app3\">\n            <div id=\"move\">\u70B9\u51FB\u6211\u4F1A\u79FB\u52A8\u54DF</div>\n        </section>";
+var element = (0, _jquery.default)(htmlApp3).appendTo((0, _jquery.default)('body>#page'));
 var $move = (0, _jquery.default)('#move');
 var active = localStorage.getItem('app3-index') === 'yes';
 
@@ -11400,6 +11406,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var htmlApp4 = "\n    <section id=\"app4\">\n            <div id=\"hovers\">\u9F20\u6807\u79FB\u5165\u81EA\u52A8\u53D8\u8272</div>\n    </section>\n";
+var element = (0, _jquery.default)(htmlApp4).appendTo((0, _jquery.default)('body>#page'));
 var $hover = (0, _jquery.default)('#hovers');
 $hover.on('mouseover', function () {
   $hover.addClass('active');
@@ -11446,7 +11454,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6885" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10239" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
